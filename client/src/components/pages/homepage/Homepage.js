@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
-import AppNavbar from '../../AppNavbar';
+import NavBar from '../../navbar/NavBar';
+import Slider from './slider/Slider';
 import MainContent from '../../mainContent/MainContent';
-import Carousel from './carousel/Sliders';
-import 'bootstrap/dist/css/bootstrap.min.css';
-// import '../../App.css';
+import Footer from '../../footer/Footer';
+
 
 class Homepage extends Component {
     render() {
         return (
             <div>
-                <AppNavbar />
-                <Carousel />
+                <NavBar />
+                <Slider />
                 <MainContent />
+                <Footer />
             </div>
         );
     }

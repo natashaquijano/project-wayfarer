@@ -1,20 +1,25 @@
 import React, { Component } from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css';
-// import './App.css';
+import './mainContent.css';
 
 class MainContent extends Component {
     render() {
         return (
-            <div className="container">
+            <div className="container mtop">
+                <h2 className="center">What is WAYFARER?</h2>
+
                 <div className="row">
                     <div className="col-sm">
-                        Topic City 1
-                     </div>
+                        <h3>way·far·er</h3>
+                        <h4>/ˈwāˌferər/</h4>
+                        <p>noun: wayfarer;<br/>plural noun: wayfarers</p>
+                        <p>a person who travels on foot.</p>
+                    </div>
                     <div className="col-sm">
-                        Topic City 2
-                     </div>
+                        <h5 className="lineheight"><strong>Synonyms:</strong> drifter, vagabond, gypsy...</h5>
+                        <h6 className="lineheight"><em>knockabout, maunderer, nomad, rambler, roamer, rover, stroller, wanderer</em></h6>
+                    </div>
                     <div className="col-sm">
-                        Topic City 3
+                        <h5 className="lineheight">One of the great <em>wayfarers</em> of American folklore, <strong>Johnny Appleseed</strong> wandered across the country, always planting apple seeds.</h5>
                     </div>
                 </div>
             </div>
