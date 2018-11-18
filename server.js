@@ -15,6 +15,7 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
+
 app.post('/users', userController.createUser);
 app.put('/users/:id', auth.authenticateUser, userController.updateUser)
 app.post('/login', userController.loginUser);
