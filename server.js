@@ -5,8 +5,6 @@ const mongoose = require('mongoose');
 const userController = require('./controllers/user')
 const auth = require('./middleware/auth')
 
-
-
 mongoose
     .connect(process.env.MONGO_URL)
     .then(() => console.log('MongoDB is running'))
@@ -20,9 +18,6 @@ app.use(bodyParser.json())
 app.post('/users', userController.createUser);
 app.put('/users/:id', auth.authenticateUser, userController.updateUser)
 app.post('/login', userController.loginUser);
-
-
-
 
 const port = process.env.PORT || 4000;
 
