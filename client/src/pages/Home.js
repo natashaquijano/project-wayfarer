@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import NavBar from '../../navbar/NavBar';
-import Slider from './slider/Slider';
-import MainContent from '../../mainContent/MainContent';
-import Footer from '../../footer/Footer';
+import NavBar from '../components/navbar/NavBar';
+import Slider from '../components/slider/Slider';
+import MainContent from '../components/mainContent/MainContent';
+import Footer from '../components/footer/Footer';
 
 
 class Home extends Component {

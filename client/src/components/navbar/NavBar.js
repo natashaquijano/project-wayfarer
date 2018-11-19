@@ -21,7 +21,7 @@ class NavBar extends Component {
                                 }}>Log In<span className="sr-only">(current)</span></Link>
                             </li>
                             <li class="nav-item">
-                                <Link class="nav-link" data-toggle="modal" data-target="#login-modal" exact path to="/" onClick={() => {
+                                <Link className="nav-link" data-toggle="modal" data-target="#login-modal" exact path to="/" onClick={() => {
                                     this.props.history.push("/signup")
                                 }}>Sign Up</Link>
                             </li>
