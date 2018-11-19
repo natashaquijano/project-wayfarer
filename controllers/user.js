@@ -20,7 +20,7 @@ module.exports = {
     loginUser: (req, res) => {
         const email = req.body.email
         const password = req.body.password
-
+        console.time('mongo');
         User.findOne({
             email
         }).then((user) => {
@@ -29,16 +29,18 @@ module.exports = {
                     error: "User does not exist"
                 })
             }
+            console.timeEnd('mongo');
+            console.time('password');
             const validPassword = user.comparePassword(password)
-
+            console.timeEnd('password');
             if (!validPassword) {
                 return res.status(401).send({
                     error: "Unauthorized, Invalid password"
                 })
             }
-
+            console.time('generate');
             const token = auth.generateToken(user)
-
+            console.timeEnd('generate');
             return res.send({
                 token,
             })
