@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import axiosInstance from '../helper/apiConfig'
-import NavBar from '../components/NavBar'
-import { Button, Form, FormGroup, Label, Input } from 'reactstrap'
-import Loader from 'react-loader-spinner'
+import axiosInstance from '../helper/apiConfig';
+import NavBar from '../components/NavBar';
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import Loader from 'react-loader-spinner';
+import Footer from '../components/Footer/Footer';
+import Photo from '../components/Images/SF.jpg';
 
 class Profile extends Component {
     state = {
@@ -66,7 +68,7 @@ class Profile extends Component {
         return (
             <div>
                 <NavBar history={this.props.history} />
-                <h1>Profile page</h1>
+                <h1>User Profile</h1>
                 <h1>{createdOn}</h1>
                 <Form>
                     <FormGroup>
@@ -83,6 +85,10 @@ class Profile extends Component {
                     </FormGroup>
                     <Button onClick={this.handleClick}> Submit</Button>
                 </Form>
+
+                <img src={Photo} />
+
+                <Footer />
 
             </div>
         );
