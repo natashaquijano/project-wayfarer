@@ -1,0 +1,22 @@
+.dotted {
+    outline: 1px #ccc dotted;
+  }
+  
+  .center {
+      text-align: center;
+  }
+  
+  .mtop {
+      margin-top: 80px;
+  }
+  
+  .col-sm {
+      margin: 50px 0 80px 0;
+      padding:0 25px;
+      border-left: 1px solid #ccc;
+      text-align: center;
+  }
+  
+  .lineheight{
+      line-height: 1.75em;
+  }
