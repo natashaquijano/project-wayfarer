@@ -23,6 +23,7 @@ app.get('/', (req, res) => {
 
 app.post('/signup', userController.createUser);
 app.put('/users/:id', auth.authenticateUser, userController.updateUser)
+app.get('/users/:id', auth.authenticateUser, userController.getUser)
 app.post('/login', userController.loginUser);
 
 const port = process.env.PORT || 4000;

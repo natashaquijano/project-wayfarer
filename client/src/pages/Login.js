@@ -30,7 +30,7 @@ class Login extends Component {
                 this.setState({
                     loading: false
                 })
-                console.log("eerrror", error.message)
+                alert(error.message)
             })
     }
     render() {
