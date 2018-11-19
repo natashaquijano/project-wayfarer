@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import axiosInstance from '../helper/apiConfig'
-import NavBar from '../components/NavBar'
-import { Button, Form, FormGroup, Label, Input } from 'reactstrap'
-import Loader from 'react-loader-spinner'
+import axiosInstance from '../helper/apiConfig';
+import NavBar from '../components/NavBar';
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import Loader from 'react-loader-spinner';
+import Footer from '../components/Footer/Footer';
 
 class Profile extends Component {
     state = {
@@ -83,6 +84,8 @@ class Profile extends Component {
                     </FormGroup>
                     <Button onClick={this.handleClick}> Submit</Button>
                 </Form>
+
+                <Footer />
 
             </div>
         );
