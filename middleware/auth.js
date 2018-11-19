@@ -31,6 +31,9 @@ class Authenticator {
         return jwt.sign({
             firstName: user.firstName,
             lastName: user.lastName,
+            email: user.email,
+            city: user.city,
+            createdOn: user.createdOn,
             id: user._id
         }, SECRET_KEY, { expiresIn: 86400 });
     }

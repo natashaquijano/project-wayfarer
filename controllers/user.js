@@ -9,6 +9,7 @@ module.exports = {
                 const token = auth.generateToken(savedUser)
                 return res.send({
                     token,
+                    userId: savedUser._id
                 })
             })
             .catch((error) => {
@@ -43,6 +44,7 @@ module.exports = {
             console.timeEnd('generate');
             return res.send({
                 token,
+                userId: user._id
             })
 
         }).catch((error) => {
@@ -63,6 +65,28 @@ module.exports = {
             .then((updatedUser) => {
                 return res.send({
                     user: updatedUser
+                })
+            })
+            .catch((error) => {
+                return res.status(500).send({
+                    error: error.message
+                })
+            })
+
+
+    },
+    getUser: (req, res) => {
+        const id = req.params.id;
+        if (id !== req.decoded.id) {
+            return res.status(403).send({
+                error: "you are not allowed to get another user's profile"
+            })
+        };
+
+        User.findOne({ _id: id })
+            .then((user) => {
+                return res.send({
+                    user
                 })
             })
             .catch((error) => {
