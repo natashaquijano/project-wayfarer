@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -7,7 +7,7 @@ import { isAuthenticated } from './helper/'
 
 import Home from './pages/Home';
 import Login from './pages/Login';
-import SignUp from './pages/SignUp'
+import SignUp from './pages/SignUp';
 import Profile from './pages/Profile';
 
 
